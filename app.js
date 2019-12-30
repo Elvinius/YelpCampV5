@@ -6,7 +6,7 @@ var express =    require("express"),
 	Comment = require("./models/comment"),
 	seedDB = require("./seeds");
 
-mongoose.connect('mongodb://localhost:3000/yelp_camp_v5', { useNewUrlParser: true,
+mongoose.connect('mongodb://localhost:27017/yelp_camp_v5', { useNewUrlParser: true,
 	useUnifiedTopology: true
 	});
 app.use(bodyParser.urlencoded({extended:true}));
@@ -108,6 +108,6 @@ app.post("/campgrounds/:id/comments", function(req, res){
 	
 })
 
-app.listen(3000, function(){
+app.listen(3001, function(){
 	console.log("YelpCamp server has Started!");
 });
